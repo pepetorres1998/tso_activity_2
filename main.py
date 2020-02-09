@@ -6,7 +6,7 @@ if(__name__=='__main__'):
     with open('values.txt', 'r') as f:
         values = [Element(line.rstrip()) for line in f.readlines()]
         p = Package(30)
-        values.sort(key=lambda x: x.relation, reverse=True)
+        values.sort(key=lambda x: x.value, reverse=True)
 
         for value in values:
             p.add_element(value)
